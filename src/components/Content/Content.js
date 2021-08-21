@@ -1,0 +1,87 @@
+import React from "react";
+
+const Content = () => {
+  return (
+    <div>
+      <div>Content</div>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+    </div>
+  );
+};
+
+export default Content;

@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { theme } from "./themes";
 
-import { isMobile, isAndroid } from "react-device-detect";
-import GlobalStyles from "./themes/globalStyles";
+import { isMobile } from "react-device-detect";
+import GlobalStyles, { Main, Wrapper } from "./themes/globalStyles";
+import { Navbar } from "./components";
+import { Attend, Home, Leave, Profile } from "./pages";
 
 function App() {
-  useEffect(() => {
-    console.log("Is  " + isAndroid);
-  });
-
   if (!isMobile) {
     return <h1 style={{ textAlign: "center" }}>Windows Browser Not Support</h1>;
   }
@@ -18,7 +16,22 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <BrowserRouter>
-        <h1>App</h1>
+        <Wrapper>
+          <Main>
+            <Navbar />
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route path="/attend" component={Attend} />
+              <Route path="/leave" component={Leave} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/detail" component={Profile} />
+
+              <Route path="/">
+                <Redirect to="/home" />
+              </Route>
+            </Switch>
+          </Main>
+        </Wrapper>
       </BrowserRouter>
     </ThemeProvider>
   );
