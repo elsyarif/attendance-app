@@ -1,10 +1,12 @@
 import React from "react";
+import { Container, Label, InputCustome } from "./inputStyles";
 
 const Input = ({ type, ...other }) => {
   return (
-    <>
-      <input type={type} other />
-    </>
+    <Container>
+      <InputCustome type={type} other />
+      <Label>Label</Label>
+    </Container>
   );
 };
 
