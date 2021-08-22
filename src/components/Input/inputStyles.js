@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 8px;
   position: relative;
 `;
 
@@ -23,6 +23,7 @@ export const Label = styled.label`
 `;
 
 export const InputCustome = styled.input`
+  appearance: none;
   border-radius: 0;
   display: flex;
   font-size: 100%;
@@ -30,17 +31,25 @@ export const InputCustome = styled.input`
   text-shadow: none;
 
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
   color: #000;
   flex: 1 1 auto;
   order: 2;
+  &::placeholder {
+    color: transparent;
+  }
   &:focus {
     outline: 0;
   }
   &:not(:focus) {
-    color: transparent;
+    color: #000;
   }
   &:focus + ${Label} {
+    color: #3949ab;
+    opacity: 1;
+    transform: scale(0.8) translate3d(0, 5px, 0);
+  }
+  &:not(:placeholder-shown) + ${Label} {
     color: #3949ab;
     opacity: 1;
     transform: scale(0.8) translate3d(0, 5px, 0);
