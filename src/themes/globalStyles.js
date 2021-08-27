@@ -17,7 +17,7 @@ body{
 `;
 
 export const Main = styled.div`
-  height: 90vh;
+  height: 100vh;
   overflow: auto;
   /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
 `;

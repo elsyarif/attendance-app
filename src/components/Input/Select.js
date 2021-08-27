@@ -44,9 +44,9 @@ const Select = () => {
   return (
     <Container>
       <Label>Status</Label>
-      <SelectBox>
-        <Option disabled selected value="">
-          -- select --
+      <SelectBox Value="0">
+        <Option disabled selected Value="0">
+          --select--
         </Option>
         <Option value="1">Masuk</Option>
         <Option value="2">Pulang</Option>

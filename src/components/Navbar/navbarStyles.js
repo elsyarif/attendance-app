@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const Nav = styled.nav`
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 55px;
   filter: drop-shadow(0 0 5px rgba(31, 31, 31, 0.1));
   bottom: 0;
   background: white;

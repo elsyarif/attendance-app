@@ -1,19 +1,23 @@
 import React from "react";
-import { File, Input, Select, Topnav } from "../../components";
+import { File, Input, Select } from "../../components";
+import { Container, Header, HeaderWrapper, SubHeader } from "./attendStyles";
 
 import { Wrapper } from "./attendStyles";
 
 const Attend = () => {
   return (
-    <div>
-      <Topnav />
+    <Container>
+      <HeaderWrapper>
+        <Header>Attendance Application</Header>
+        <SubHeader>TEAM</SubHeader>
+      </HeaderWrapper>
       <Wrapper>
         <Input type="number" id="nik" name="nik" label="NIK" />
         <Input type="text" id="nik" name="status" label="Status" />
         <Select />
         <File />
       </Wrapper>
-    </div>
+    </Container>
   );
 };
 
