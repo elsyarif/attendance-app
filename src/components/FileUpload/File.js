@@ -34,7 +34,6 @@ const File = () => {
       setFile(e.target.result);
       setImage(true);
     };
-    debugger;
 
     let file_Size = e.target.files[0].size;
     if (file_Size > 1024 * 1024) {
@@ -51,7 +50,6 @@ const File = () => {
   };
 
   const removeImage = (e) => {
-    debugger;
     setImage(false);
     setFile("");
     setFileSize(null);
@@ -96,6 +94,7 @@ const File = () => {
         id="uploadFile"
         accept="image/*"
         capture="user"
+        name="uploadFile"
         onChange={handleChange}
       />
       <BtnWrapper>

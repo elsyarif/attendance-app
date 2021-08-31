@@ -18,15 +18,15 @@ const Card = ({ items }) => {
       <Wrapper>
         <CardImage>
           <Link to="/detail">
-            <img src={items.img} alt={items.img} />
+            <img src={items.image} alt={items.image} />
           </Link>
         </CardImage>
         <CardContent>
-          <CardHeader>{items.nama}</CardHeader>
-          <CardSub>{items.nik}</CardSub>
+          <CardHeader>{items.name}</CardHeader>
+          <CardSub>{items.nip}</CardSub>
           <CardBody>
             <CardFooter>
-              <CardTime>{items.jmMasuk}</CardTime>
+              <CardTime>{items.waktu}</CardTime>
               <CardStatus>{items.status}</CardStatus>
             </CardFooter>
             <CardFooter>

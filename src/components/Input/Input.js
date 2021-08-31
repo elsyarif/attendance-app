@@ -8,13 +8,12 @@ const Input = ({ type, label, ...rest }) => {
     console.log(e.target.value);
     setValue(e.target.value);
   };
-  const { id, name } = rest;
+
   return (
     <Container>
       <InputCustome
         type={type}
-        id={id}
-        name={name}
+        {...rest}
         onChange={handleChange}
         value={value}
         placeholder={label}

@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { io } from "socket.io-client";
+import axios from "axios";
+
 import { Card } from "../../components";
 import { Wrapper } from "./homeSyles";
 
@@ -168,9 +171,45 @@ const data = [
 ];
 
 const Home = () => {
+  const [attend, setAttend] = useState([]);
+
+  useEffect(() => {
+    const socket = io("ws://localhost:5000");
+
+    socket.on("connection", () => {
+      console.log(`connected to server`);
+    });
+
+    socket.on("create-attendc", (newAttend) => {
+      setAttend(newAttend);
+    });
+
+    socket.on("delete-attendc", (newAttend) => {
+      setAttend(newAttend);
+    });
+
+    socket.on("message", (message) => {
+      console.log(message);
+    });
+
+    socket.on("disconnect", () => {
+      console.log("Socket disconnecting");
+    });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/attende")
+      .then((response) => {
+        setAttend(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <Wrapper>
-      {data.map((item, i) => {
+      {attend.map((item, i) => {
         return <Card key={i} items={item} id={i} />;
       })}
     </Wrapper>
